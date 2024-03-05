@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+.menu {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 95%;
+    background-color: #333;
+    padding: 15px 20px;
+    z-index: 1000;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin: 0 10px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.search-bar {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+}
+
+.content {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.movie-container {
+    display: flex;
+    overflow-x: auto ; /* Enable horizontal scrolling */
+    padding: 10px 10px;
+    white-space: nowrap; /* Prevent movies from wrapping */
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.movie-poster:hover {
+    transform: scale(1.06);
+}
+
+/* Animations */
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.zoom-in {
+    animation: zoomIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade {
+    animation: fadeIn 1s ease forwards;
+}
+
+.movie-box {
+    background-color: #333;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden;
+    text-decoration: none; /* Remove underline for anchor tags */
+}
+
+.movie-info {
+    padding: 5px;
+}
+
+.small .movie-poster {
+    width: 100px;
+}
+
+.medium .movie-poster {
+    width: 150px;
+}
+
+.large .movie-poster {
+    width: 200px;
+}
+
+.movie-poster {
+    border-radius: 10px 10px 10px 10px; /* Rounded corners for the top */
+}
+
+.movie-name {
+    color: #fff;
+    margin: 5px 0 0; /* Add margin to separate from the poster */
+    text-align: center;
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.search-bar {
+    width: 150px; /* Adjust the width as needed */
+    display: none; /* Initially hide the search bar */
+}
+
+
+/* Gallery Styles */
+.gallery-container {
+    overflow: hidden;
+    width: 100%;
+    height: 1000%; /* Adjust height as needed */
+    position: relative;
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform 0.5s ease; /* Adjust animation duration as needed */
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Initially hide all images */
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 10px; /* Adjust the position of the caption */
+    left: 10px; /* Adjust the position of the caption */
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+}
